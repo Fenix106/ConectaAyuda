@@ -1,0 +1,90 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --azul: #082f68; --azul2: #0d4c91; --celeste: #eaf3ff; --dorado: #d5ad55; --verde: #079b59; --texto: #18345a; }
+html { scroll-behavior: smooth; }
+body { font-family: "Poppins", Arial, sans-serif; color: var(--texto); background: #f4f7fc; }
+a { text-decoration: none; color: inherit; }
+.encabezado { min-height: 100px; background: linear-gradient(110deg,#062653,#0a3977); color: white; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 12px 4.5%; position: sticky; top: 0; z-index: 20; box-shadow: 0 4px 18px #001c4430; }
+.marca { display: flex; align-items: center; gap: 16px; min-width: 280px; }
+.logo { width: 76px; height: 76px; object-fit: contain; background: white; border-radius: 50%; border: 3px solid #e5c875; }
+.marca-texto { display: flex; flex-direction: column; line-height: 1.2; }
+.marca-texto strong { font-size: 27px; }
+.marca-texto small { font-style: italic; opacity: .9; margin-top: 5px; }
+.navegacion { display: flex; align-items: center; gap: clamp(12px,2vw,28px); }
+.navegacion a { font-size: 13px; font-weight: 600; transition: .2s; }
+.navegacion a:hover { color: #f2d78f; }
+.navegacion .nav-contacto { border: 1px solid #55a8ff; border-radius: 24px; padding: 11px 17px; }
+.menu-toggle { display: none; border: 0; color: white; background: transparent; font-size: 28px; cursor: pointer; }
+.hero { min-height: 490px; padding: 65px 5%; display: flex; align-items: center; justify-content: space-between; gap: 35px; position: relative; overflow: hidden; background: radial-gradient(circle at 72% 25%,#d8eaff 0,transparent 30%), linear-gradient(115deg,#eaf4ff 0%,#d7e9fc 54%,#b6d0ed 100%); }
+.hero:after { content: "♡"; position: absolute; right: 28%; bottom: -115px; font-size: 390px; color: #ffffff50; pointer-events: none; }
+.hero-contenido { max-width: 590px; z-index: 1; }
+.etiqueta { display: inline-block; color: #0d5aa7; background: #ffffffb8; border: 1px solid #c9ddf6; border-radius: 20px; padding: 7px 14px; font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.hero h1 { color: var(--azul); font-size: clamp(42px,5.2vw,70px); line-height: 1.08; margin: 17px 0 12px; }
+.hero h2 { color: #17477f; font-size: clamp(20px,2.4vw,30px); line-height: 1.25; max-width: 520px; }
+.hero-contenido p { max-width: 500px; line-height: 1.7; margin: 18px 0 25px; font-size: 16px; }
+.boton { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 13px 21px; border-radius: 30px; border: 0; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
+.boton:hover,.ayuda-opcion:hover { transform: translateY(-3px); box-shadow: 0 9px 22px #092e6530; }
+.boton-blanco { background: var(--azul); color: white; }
+.boton-blanco span { font-size: 24px; }
+.contacto-rapido { width: min(340px,100%); padding: 23px; border-radius: 24px; background: #ffffffed; box-shadow: 0 12px 35px #092e6530; z-index: 2; }
+.contacto-bloque { display: grid; grid-template-columns: 48px 1fr; gap: 8px 12px; align-items: center; }
+.contacto-icono { width: 45px; height: 45px; display: grid; place-items: center; border-radius: 50%; color: white; font-size: 27px; }
+.whatsapp-icono { background: #18b968; }.bot-icono { background: #0d559d; }
+.contacto-bloque h3 { font-size: 16px; color: var(--azul); }
+.contacto-bloque p { font-size: 12px; line-height: 1.5; margin-top: 4px; }
+.boton-ancho { grid-column: 1 / -1; width: 100%; color: white; }
+.boton-verde { background: #079e5b; }.boton-azul { background: var(--azul); color: white; }
+.separador { height: 1px; background: #dce6f3; margin: 20px 0; }
+.paneles { padding: 24px 3.5%; display: grid; grid-template-columns: 1.1fr 1.15fr 1fr; gap: 18px; align-items: stretch; }
+.panel { background: white; border: 1px solid #dce8f7; border-radius: 20px; padding: 21px; box-shadow: 0 5px 18px #173d6d12; position: relative; overflow: hidden; }
+.titulo-panel { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 17px; }
+.titulo-panel h2 { font-size: clamp(17px,1.5vw,22px); color: var(--azul); }
+.titulo-panel a { font-size: 12px; font-weight: 700; color: #0b559f; white-space: nowrap; }
+.actividades-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.tarjeta-actividad { background: #edf4ff; border-radius: 12px; overflow: hidden; text-align: center; padding-bottom: 12px; }
+.actividad-foto { height: 112px; display: grid; place-items: center; font-size: 48px; color: white; }
+.foto-uno { background: linear-gradient(135deg,#77b6a2,#1e6482); }.foto-dos { background: linear-gradient(135deg,#e3b78c,#a56b65); }.foto-tres { background: linear-gradient(135deg,#8fb5d7,#345f8a); }
+.actividad h3 { font-size: 12px; line-height: 1.4; margin: 10px 5px 4px; color: var(--azul); }
+.actividad p { display: none; font-size: 11px; padding: 0 7px; }
+.nota-imagenes { color: #71829a; font-size: 10px; margin-top: 10px; }
+.centrado { justify-content: center; text-align: center; }
+.subtitulo { text-align: center; font-size: 12px; margin: -8px 0 18px; }
+.ayuda-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.ayuda-opcion { min-height: 178px; color: white; border-radius: 17px; padding: 15px 9px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 9px; box-shadow: 0 5px 12px #092e6520; transition: .2s; }
+.donar { background: linear-gradient(150deg,#0b4d98,#062b5b); }.voluntario { background: linear-gradient(150deg,#0db36b,#087345); }.comunitario { background: linear-gradient(150deg,#7040ae,#432078); }
+.ayuda-icono { font-size: 34px; line-height: 1; }
+.ayuda-opcion strong { font-size: 14px; line-height: 1.3; }
+.ayuda-opcion small { font-size: 11px; line-height: 1.4; }
+.certificados-panel p { font-size: 13px; line-height: 1.8; position: relative; z-index: 1; margin: 10px 0 20px; }
+.certificado-deco { position: absolute; right: 15px; bottom: 15px; color: #d9e7f8; font-size: 100px; transform: rotate(-9deg); }
+.certificados-panel .boton { position: relative; z-index: 2; }
+.nosotros { margin: 10px 3.5% 35px; border-radius: 22px; padding: 35px 5%; background: linear-gradient(110deg,#082b5b,#0c4b8e); color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+.etiqueta-clara { background: #ffffff1a; color: #f3d88f; border-color: #ffffff40; }
+.nosotros h2 { font-size: clamp(23px,3vw,34px); margin-top: 12px; line-height: 1.25; }
+.nosotros p { line-height: 1.8; font-size: 14px; color: #e3efff; }
+.pie { background: #062653; color: white; text-align: center; padding: 28px 15px; }
+.pie p { font-family: Georgia,serif; font-style: italic; font-size: clamp(18px,2.5vw,27px); }
+.pie p span { color: #e9ca78; font-size: 32px; }.pie small { display: block; opacity: .7; margin-top: 10px; font-size: 11px; }
+.chat-flotante { position: fixed; bottom: 22px; right: 22px; width: 58px; height: 58px; border: 0; border-radius: 50%; background: #0b4b91; color: white; font-size: 28px; cursor: pointer; box-shadow: 0 5px 20px #001e4a55; z-index: 30; }
+.chat-ventana { display: none; position: fixed; right: 22px; bottom: 92px; width: min(350px,calc(100vw - 30px)); height: 440px; background: white; border-radius: 18px; box-shadow: 0 12px 40px #001e4a40; z-index: 30; overflow: hidden; flex-direction: column; }
+.chat-ventana.abierto { display: flex; }
+.chat-cabecera { padding: 15px; background: var(--azul); color: white; display: flex; justify-content: space-between; align-items: center; }
+.chat-cabecera div { display: flex; flex-direction: column; }.chat-cabecera small { opacity: .75; font-size: 10px; }
+.chat-cabecera button { color: white; border: 0; background: transparent; font-size: 27px; cursor: pointer; }
+.chat-mensajes { flex: 1; padding: 14px; overflow-y: auto; background: #f4f7fc; }
+.mensaje { max-width: 88%; padding: 10px 12px; border-radius: 13px; margin-bottom: 10px; font-size: 12px; line-height: 1.5; }
+.mensaje.bot { background: white; border: 1px solid #e1e8f2; }.mensaje.usuario { background: #dcecff; margin-left: auto; }
+.chat-opciones { padding: 8px 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.chat-opciones button { background: #edf4ff; border: 1px solid #c9dcf3; border-radius: 15px; padding: 6px 9px; color: var(--azul); font-size: 10px; cursor: pointer; }
+.chat-form { display: flex; padding: 10px; border-top: 1px solid #e4ebf4; gap: 8px; }
+.chat-form input { min-width: 0; flex: 1; border: 1px solid #d7e1ed; border-radius: 20px; padding: 10px 13px; font: inherit; font-size: 12px; outline-color: #438bd4; }
+.chat-form button { width: 39px; border: 0; border-radius: 50%; background: var(--azul); color: white; cursor: pointer; }
+@media (max-width: 1050px) { .encabezado { flex-wrap: wrap; }.navegacion { gap: 13px; }.navegacion a { font-size: 11px; }.paneles { grid-template-columns: 1fr 1fr; }.certificados-panel { grid-column: 1 / -1; } }
+@media (max-width: 720px) {
+  .encabezado { min-height: 78px; padding: 8px 5%; }.logo { width: 56px; height: 56px; }.marca { min-width: 0; gap: 10px; }.marca-texto strong { font-size: 20px; }.marca-texto small { font-size: 10px; }
+  .menu-toggle { display: block; }.navegacion { display: none; width: 100%; flex-direction: column; align-items: stretch; padding: 10px 0 15px; }.navegacion.visible { display: flex; }.navegacion a { padding: 9px; font-size: 13px; }.navegacion .nav-contacto { text-align: center; }
+  .hero { padding: 45px 6%; flex-direction: column; align-items: stretch; }.hero-contenido { max-width: 100%; }.contacto-rapido { width: 100%; }.hero:after { right: -50px; }
+  .paneles { grid-template-columns: 1fr; padding: 16px 4%; }.certificados-panel { grid-column: auto; }.panel { padding: 17px; }
+  .actividad-foto { height: 90px; }.actividad h3 { font-size: 11px; }.ayuda-opcion { min-height: 160px; padding: 12px 6px; }.ayuda-opcion strong { font-size: 12px; }.ayuda-opcion small { font-size: 10px; }
+  .nosotros { grid-template-columns: 1fr; gap: 15px; margin: 5px 4% 25px; padding: 27px 7%; }
+}
+@media (max-width: 390px) { .actividades-grid { gap: 6px; }.actividad-foto { height: 75px; }.ayuda-grid { gap: 6px; }.ayuda-opcion { min-height: 150px; }.ayuda-opcion strong { font-size: 11px; } }

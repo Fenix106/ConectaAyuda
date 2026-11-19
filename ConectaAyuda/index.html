@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conecta Ayuda: una red de apoyo para la Casa de Reposo Mis Tatas.">
+  <title>Conecta Ayuda | Casa de Reposo Mis Tatas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="marca" href="#inicio" aria-label="Conecta Ayuda, inicio">
+      <img src="img/logo.png" alt="Logotipo de la Casa de Reposo Mis Tatas" class="logo">
+      <span class="marca-texto"><strong>Conecta Ayuda</strong><small>Juntos por un mejor mañana</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="navegacion" id="navegacion">
+      <a href="#inicio">Inicio</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#ayudar">¿Cómo ayudar?</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#nosotros">Nosotros</a>
+      <a class="nav-contacto" href="#contacto">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-contenido">
+        <span class="etiqueta">Casa de Reposo Mis Tatas</span>
+        <h1>Conecta Ayuda</h1>
+        <h2>Una red de apoyo para nuestros adultos mayores</h2>
+        <p>Tu solidaridad puede convertirse en compañía, bienestar y una mejor calidad de vida para quienes más lo necesitan.</p>
+        <a class="boton boton-blanco" href="#ayudar">Sé parte del cambio <span>♡</span></a>
+      </div>
+
+      <aside class="contacto-rapido" id="contacto">
+        <div class="contacto-bloque">
+          <div class="contacto-icono whatsapp-icono">◉</div>
+          <div><h3>Conecta con nosotros</h3><p>Escríbenos por WhatsApp y recibe más información.</p></div>
+          <a class="boton boton-verde boton-ancho" data-whatsapp="general" href="#">WhatsApp del asilo ↗</a>
+        </div>
+        <div class="separador"></div>
+        <div class="contacto-bloque chatbot-resumen">
+          <div class="contacto-icono bot-icono">✦</div>
+          <div><h3>ChatBot de Ayuda</h3><p>Pregunta y recibe orientación al instante.</p></div>
+          <button class="boton boton-azul boton-ancho" id="abrirChat">Iniciar chat ↗</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="paneles">
+      <section class="panel actividades-panel" id="actividades">
+        <div class="titulo-panel">
+          <h2>▦ Nuestras Actividades</h2>
+          <a href="#actividades-lista">Ver todas →</a>
+        </div>
+        <div class="actividades-grid" id="actividades-lista">
+          <article class="actividad tarjeta-actividad">
+            <div class="actividad-foto foto-uno">♡</div>
+            <h3>Actividades recreativas</h3>
+            <p>Momentos de movimiento, alegría y convivencia.</p>
+          </article>
+          <article class="actividad tarjeta-actividad">
+            <div class="actividad-foto foto-dos">✿</div>
+            <h3>Talleres artísticos</h3>
+            <p>Espacios para crear, aprender y compartir.</p>
+          </article>
+          <article class="actividad tarjeta-actividad">
+            <div class="actividad-foto foto-tres">☼</div>
+            <h3>Jornadas de acompañamiento</h3>
+            <p>Visitas y actividades para brindar compañía.</p>
+          </article>
+        </div>
+        <p class="nota-imagenes">Las actividades y fotografías se pueden actualizar con información real del asilo.</p>
+      </section>
+
+      <section class="panel ayuda-panel" id="ayudar">
+        <div class="titulo-panel centrado"><h2>♡ ¿Cómo puedes ayudar?</h2></div>
+        <p class="subtitulo">Elige una opción y conecta con nosotros por WhatsApp:</p>
+        <div class="ayuda-grid">
+          <a class="ayuda-opcion donar" data-whatsapp="donar" href="#">
+            <span class="ayuda-icono">▣</span>
+            <strong>Donar víveres</strong>
+            <small>¡Tu ayuda alimenta su bienestar!</small>
+          </a>
+          <a class="ayuda-opcion voluntario" data-whatsapp="voluntario" href="#">
+            <span class="ayuda-icono">♧</span>
+            <strong>Ser voluntario</strong>
+            <small>Comparte tu tiempo y talento.</small>
+          </a>
+          <a class="ayuda-opcion comunitario" data-whatsapp="comunitario" href="#">
+            <span class="ayuda-icono">♡</span>
+            <strong>Servicio comunitario</strong>
+            <small>Apoya con tu servicio.</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="panel certificados-panel" id="certificados">
+        <div class="titulo-panel"><h2>✧ Certificados para estudiantes</h2></div>
+        <p>La Casa de Reposo Mis Tatas brinda la posibilidad de realizar prácticas y actividades formativas para estudiantes de medicina, con certificados según las condiciones y coordinación del asilo.</p>
+        <a class="boton boton-azul" data-whatsapp="certificados" href="#">Solicitar información →</a>
+        <div class="certificado-deco" aria-hidden="true">▤</div>
+      </section>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+      <div>
+        <span class="etiqueta etiqueta-clara">Nuestra misión</span>
+        <h2>Pequeñas acciones pueden generar grandes cambios.</h2>
+      </div>
+      <p>Conecta Ayuda busca acercar a personas solidarias a la Casa de Reposo Mis Tatas. A través de donaciones, voluntariado y servicio comunitario, todos podemos contribuir al bienestar de los adultos mayores.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Porque juntos podemos brindar una mejor calidad de vida <span>♡</span></p>
+    <small>Conecta Ayuda · Casa de Reposo Mis Tatas</small>
+  </footer>
+
+  <button class="chat-flotante" id="chatFlotante" aria-label="Abrir chatbot">✦</button>
+  <section class="chat-ventana" id="chatVentana" aria-label="ChatBot de Ayuda" aria-hidden="true">
+    <div class="chat-cabecera"><div><strong>ChatBot de Ayuda</strong><small>Asistente de Conecta Ayuda</small></div><button id="cerrarChat" aria-label="Cerrar chat">×</button></div>
+    <div class="chat-mensajes" id="chatMensajes">
+      <div class="mensaje bot">¡Hola! Soy el asistente de Conecta Ayuda. ¿Qué información necesitas?</div>
+    </div>
+    <div class="chat-opciones">
+      <button data-pregunta="donaciones">Donaciones</button>
+      <button data-pregunta="voluntariado">Voluntariado</button>
+      <button data-pregunta="certificados">Certificados</button>
+    </div>
+    <form id="chatForm" class="chat-form">
+      <input id="chatInput" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button type="submit" aria-label="Enviar mensaje">➤</button>
+    </form>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
